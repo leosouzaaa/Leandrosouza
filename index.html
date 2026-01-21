@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leandro Souza | Dev Futurist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg: #0a0a0c;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Efeito de Luz de Fundo */
+        .glow-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .bio {
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid transparent;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn i { margin-right: 10px; font-size: 1.2rem; }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .whatsapp { border-left: 4px solid #25d366; }
+        .instagram { border-left: 4px solid #e1306c; }
+        .email { border-left: 4px solid #fbbc05; }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <div class="container">
+        <h1>Leandro Souza</h1>
+        <p class="highlight">Software Developer & Tech Specialist</p>
+        
+        <div class="bio">
+            <p>De Bel�m do Par� para o polo tecnol�gico de <b>Blumenau</b>. 
+            Com 33 anos, atuo como t�cnico na <span class="highlight">Positivo Tecnologia S.A.</span> 
+            e transformo ideias em c�digo com uma vis�o futurista e solu��es inovadoras.</p>
+        </div>
+
+        <div class="contact-grid">
+            <a href="https://wa.me/5547988647259" class="btn whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <a href="mailto:leandro-m12@live.com" class="btn email">
+                <i class="far fa-envelope"></i> E-mail Profissional
+            </a>
+
+            <a href="https://www.instagram.com/_leosouuzaa/" class="btn instagram" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+
+        <div class="footer">
+            � 2026 Leandro Souza. Dispon�vel para novos projetos.
+        </div>
+    </div>
+
+</body>
+</html>
