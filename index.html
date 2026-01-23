@@ -8,92 +8,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
+        .img-card:hover { transform: translateY(-10px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
     <header class="relative py-12 md:py-24 px-6 bg-gradient-to-br from-blue-900 via-slate-900 to-black text-center border-b border-blue-500/20">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl md:text-6xl font-black text-white mb-4 tracking-tight">
+            <h1 class="text-3xl md:text-6xl font-black text-white mb-4 tracking-tight uppercase">
                 Controle de <span class="text-blue-500">Patrimônio</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
-                A solução definitiva para gestão de ativos com <strong>QR Code</strong> e segurança de nível empresarial.
-            </p>
+            <p class="text-lg md:text-xl text-slate-400 mb-8 italic">"Segurança e Rastreabilidade para sua Instituição"</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-xs md:text-sm font-bold uppercase">
-                    <i class="fas fa-check-circle mr-2"></i>Versão v1 (2026)
-                </span>
-                <span class="bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-lg text-xs md:text-sm font-bold uppercase">
-                    Help Tec Soluções
-                </span>
+                <span class="bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-xs md:text-sm font-bold tracking-widest uppercase">Help Tec Soluções</span>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-tight">Interface do <span class="text-blue-500">Sistema</span></h2>
         
-        <div class="grid lg:grid-cols-3 gap-8 mb-16">
-            <div class="lg:col-span-2 space-y-6">
-                <h2 class="text-2xl md:text-3xl font-bold border-l-4 border-blue-500 pl-4">Gestão Inteligente</h2>
-                <p class="text-slate-400 text-base md:text-lg">
-                    Desenvolvido por <strong>Leandro Souza</strong>, este sistema foi projetado para eliminar o caos no inventário de instituições públicas e privadas. 
-                </p>
-                <p class="text-slate-400 text-base md:text-lg">
-                    Com uma interface 100% intuitiva em <strong>Dark Mode</strong>, o operador consegue registrar entradas, gerar etiquetas em lote e realizar baixas em segundos, tudo com backup local automático.
-                </p>
-            </div>
-            
-            <div class="glass p-6 rounded-2xl border border-slate-700 shadow-xl">
-                <h3 class="text-blue-400 font-bold mb-4 uppercase text-xs tracking-widest italic">Tecnologias</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="bg-slate-800 px-3 py-1 rounded-md text-sm border border-slate-600">Python 3.13</span>
-                    <span class="bg-slate-800 px-3 py-1 rounded-md text-sm border border-slate-600">SQLite3</span>
-                    <span class="bg-slate-800 px-3 py-1 rounded-md text-sm border border-slate-600">CustomTkinter</span>
-                    <span class="bg-slate-800 px-3 py-1 rounded-md text-sm border border-slate-600">ReportLab PDF</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="img-card group">
+                <div class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-800">
+                    <img src="https://via.placeholder.com/600x400/1e293b/3b82f6?text=Login+Seguro+HelpTec" alt="Tela de Login" class="w-full h-auto opacity-80 group-hover:opacity-100 transition">
                 </div>
+                <h3 class="text-center mt-4 font-bold text-blue-400">Acesso Restrito & Seguro</h3>
+            </div>
+
+            <div class="img-card group">
+                <div class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-800">
+                    <img src="https://via.placeholder.com/600x400/1e293b/3b82f6?text=Gestão+de+Estoque+Geral" alt="Dashboard do Sistema" class="w-full h-auto opacity-80 group-hover:opacity-100 transition">
+                </div>
+                <h3 class="text-center mt-4 font-bold text-blue-400">Estoque Geral em Tempo Real</h3>
+            </div>
+
+            <div class="img-card group">
+                <div class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-800">
+                    <img src="https://via.placeholder.com/600x400/1e293b/3b82f6?text=Relatórios+PDF+e+Etiquetas" alt="Relatório PDF" class="w-full h-auto opacity-80 group-hover:opacity-100 transition">
+                </div>
+                <h3 class="text-center mt-4 font-bold text-blue-400">Relatórios e Etiquetas PDF</h3>
             </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-8 bg-slate-800/40 rounded-3xl border border-slate-700 hover:bg-slate-800 transition group">
-                <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                    <i class="fas fa-qrcode text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">QR Code Automático</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Geração de etiquetas térmicas ou A4 com códigos rastreáveis para auditoria instantânea por smartphone.</p>
+    <section class="bg-slate-800/30 py-16 px-6 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 glass rounded-2xl border border-slate-700">
+                <i class="fas fa-qrcode text-3xl text-blue-500 mb-4"></i>
+                <h4 class="text-lg font-bold mb-2">QR Code Integrado</h4>
+                <p class="text-slate-400 text-sm">Cada item recebe um código único que armazena todo o histórico do ativo.</p>
             </div>
-
-            <div class="p-8 bg-slate-800/40 rounded-3xl border border-slate-700 hover:bg-slate-800 transition group">
-                <div class="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                    <i class="fas fa-envelope-open-text text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Recuperação por E-mail</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Integração nativa com Gmail SMTP para envio de credenciais e recuperação segura de conta admin.</p>
+            <div class="p-6 glass rounded-2xl border border-slate-700">
+                <i class="fas fa-database text-3xl text-green-500 mb-4"></i>
+                <h4 class="text-lg font-bold mb-2">Banco de Dados Local</h4>
+                <p class="text-slate-400 text-sm">Privacidade total. Seus dados ficam na sua máquina, sem depender de nuvens externas.</p>
             </div>
-
-            <div class="p-8 bg-slate-800/40 rounded-3xl border border-slate-700 hover:bg-slate-800 transition group">
-                <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                    <i class="fas fa-sync text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Updates via GitHub</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Sistema inteligente que verifica novas versões no repositório oficial, mantendo o software sempre atualizado.</p>
+            <div class="p-6 glass rounded-2xl border border-slate-700">
+                <i class="fas fa-shield-alt text-3xl text-red-500 mb-4"></i>
+                <h4 class="text-lg font-bold mb-2">Proteção PyArmor</h4>
+                <p class="text-slate-400 text-sm">Código criptografado e blindado contra engenharia reversa e cópias não autorizadas.</p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-black/50 py-16 px-6 mt-12 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-8">Interessado nesta solução?</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://wa.me/5547988647259" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Falar no WhatsApp
+    <footer class="py-20 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8 uppercase tracking-widest">Solicitar Demonstração</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://wa.me/5547988647259" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold transition flex items-center justify-center shadow-lg shadow-green-900/20">
+                    <i class="fab fa-whatsapp mr-3 text-2xl"></i> WHATSAPP
                 </a>
-                <a href="mailto:leandro.souza22oliveira@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center border border-slate-600">
-                    <i class="fas fa-envelope mr-2"></i> Enviar E-mail
+                <a href="mailto:leandro.souza22oliveira@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition flex items-center justify-center shadow-lg shadow-blue-900/20">
+                    <i class="fas fa-envelope mr-3 text-xl"></i> E-MAIL
                 </a>
             </div>
-            <p class="mt-12 text-slate-500 text-xs uppercase tracking-widest">
+            <p class="mt-16 text-slate-600 text-[10px] tracking-[0.3em] uppercase">
                 © 2026 Leandro Souza - Help Tec Soluções Inteligentes
             </p>
         </div>
