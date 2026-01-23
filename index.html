@@ -3,146 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leandro Souza | Dev Futurist</title>
+    <title>Sistema Controle de Patrimônio | Help Tec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00f2ff;
-            --secondary: #7000ff;
-            --bg: #0a0a0c;
-            --text: #ffffff;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Efeito de Luz de Fundo */
-        .glow-bg {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
-            filter: blur(80px);
-            opacity: 0.3;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            margin: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .bio {
-            line-height: 1.6;
-            color: #ccc;
-            margin-bottom: 30px;
-        }
-
-        .highlight {
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .contact-grid {
-            display: grid;
-            gap: 15px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-            border: 1px solid transparent;
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .btn i { margin-right: 10px; font-size: 1.2rem; }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px var(--primary);
-        }
-
-        .whatsapp { border-left: 4px solid #25d366; }
-        .instagram { border-left: 4px solid #e1306c; }
-        .email { border-left: 4px solid #fbbc05; }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans">
 
-    <div class="glow-bg"></div>
-
-    <div class="container">
-        <h1>Leandro Souza</h1>
-        <p class="highlight">Software Developer & Tech Specialist</p>
-        
-        <div class="bio">
-            <p>De Bel&eacute;m do Par&aacute; para o polo tecnol&oacute;gico de <b>Blumenau</b>. 
-            Com 33 anos, atuo como t&eacute;cnico na <span class="highlight">Positivo Tecnologia S.A.</span> 
-            e transformo ideias em c&oacute;digo com uma vis&atilde;o futurista e solu&ccedil;&otilde;es inovadoras.</p>
+    <header class="py-16 px-4 bg-gradient-to-b from-blue-900 to-slate-900 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-blue-400 mb-4">Controle de Patrimônio v1</h1>
+        <p class="text-xl text-slate-300 max-w-2xl mx-auto italic">
+            "Transformando a gestão de ativos com inteligência, rastreabilidade e segurança."
+        </p>
+        <div class="mt-8">
+            <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest">Help Tec Soluções Inteligentes</span>
         </div>
+    </header>
 
-        <div class="contact-grid">
-            <a href="https://wa.me/5547988647259" class="btn whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            
-            <a href="mailto:leandro-m12@live.com" class="btn email">
-                <i class="far fa-envelope"></i> E-mail Profissional
-            </a>
-
-            <a href="https://www.instagram.com/_leosouuzaa/" class="btn instagram" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
+    <section class="max-w-5xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">Sobre o Software</h2>
+                <p class="text-slate-400 leading-relaxed mb-4">
+                    Desenvolvido por <strong>Leandro Souza</strong>, o Sistema de Controle de Patrimônio é uma solução desktop completa para instituições que buscam organizar o inventário de hardware e mobiliário com precisão. 
+                </p>
+                <p class="text-slate-400 leading-relaxed">
+                    O software automatiza desde o registro de entrada até a baixa de ativos, gerando etiquetas inteligentes com QR Code para consulta rápida e relatórios profissionais em PDF.
+                </p>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700">
+                <h3 class="text-blue-400 font-bold mb-4"><i class="fas fa-code mr-2"></i> Stack Tecnológica</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><i class="fab fa-python text-blue-500 mr-2"></i> <strong>Python 3.13</strong> - Núcleo de alta performance</li>
+                    <li><i class="fas fa-layer-group text-blue-500 mr-2"></i> <strong>CustomTkinter</strong> - Interface Moderna (Dark Mode)</li>
+                    <li><i class="fas fa-database text-blue-500 mr-2"></i> <strong>SQLite3</strong> - Banco de dados local seguro</li>
+                    <li><i class="fas fa-qrcode text-blue-500 mr-2"></i> <strong>QR Code Engine</strong> - Rastreabilidade em tempo real</li>
+                    <li><i class="fas fa-file-pdf text-blue-500 mr-2"></i> <strong>ReportLab</strong> - Automação de documentos e etiquetas</li>
+                </ul>
+            </div>
         </div>
+    </section>
 
-        <div class="footer">
-            &copy; 2026 Leandro Souza. Dispon&iacute;vel para novos projetos.
+    <section class="bg-slate-800/50 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Diferenciais do Sistema</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+                    <i class="fas fa-shield-halved text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Segurança Multinível</h3>
+                    <p class="text-slate-400 text-sm">Acesso restrito via login, recuperação de senha por e-mail e chave mestre de hardware.</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+                    <i class="fas fa-print text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Etiquetas Inteligentes</h3>
+                    <p class="text-slate-400 text-sm">Geração automática de etiquetas em lote com QR Code integrado para auditorias rápidas.</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+                    <i class="fas fa-cloud-download-alt text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Update Silencioso</h3>
+                    <p class="text-slate-400 text-sm">Integração com GitHub para verificação automática de novas versões disponíveis.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        <p>© 2026 Help Tec Soluções Inteligentes. Desenvolvido por Leandro Souza.</p>
+        <div class="mt-4 space-x-6">
+            <a href="mailto:leandro.souza22oliveira@gmail.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i> E-mail</a>
+            <a href="https://wa.me/5547988647259" class="hover:text-green-400"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </footer>
 
 </body>
 </html>
