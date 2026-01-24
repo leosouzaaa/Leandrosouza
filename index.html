@@ -7,101 +7,103 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Cor de fundo solicitada */
-        body { background-color: #2b2b2b; }
-        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .card-shadow { box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        body { background-color: #1a1a1a; color: #e5e7eb; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-blue { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+        .img-container { position: relative; overflow: hidden; border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .img-container:hover { transform: translateY(-5px); border-color: #3b82f6; }
     </style>
 </head>
-<body class="text-slate-100 font-sans antialiased">
+<body class="font-sans antialiased">
 
     <nav class="fixed w-full z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Logo" class="w-10 h-10 object-contain"> 
-                <span class="font-bold tracking-tighter text-lg md:text-xl uppercase">HELP TEC</span>
+                <img src="logo.png" alt="Help Tec" class="w-10 h-10 object-contain">
+                <span class="font-black text-xl tracking-tighter uppercase text-white">Help <span class="text-blue-500">Tec</span></span>
             </div>
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs md:text-sm font-black transition-all">
-                COMPRAR AGORA
-            </a>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="gradient-blue text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg shadow-blue-500/20">OBTER AGORA</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-16 md:pt-48 md:pb-32 px-6 text-center">
+    <section class="pt-32 pb-20 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight uppercase tracking-tighter">
-                CONTROLE DE <span class="gradient-text text-blue-500">PATRIMÔNIO</span>
-            </h1>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-white italic">GESTÃO DE ATIVOS <br><span class="text-blue-500 tracking-normal">SEM COMPLICAÇÕES</span></h1>
+            <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Transforme a organização da sua instituição com a solução definitiva em rastreabilidade, auditoria e controle patrimonial.
+            </p>
             
-            <div class="inline-block glass p-6 md:p-8 rounded-3xl mb-10 card-shadow border-blue-500/20">
-                <p class="text-slate-400 text-xs md:text-sm uppercase font-bold mb-2">Investimento Único</p>
-                <div class="flex flex-col items-center">
-                    <span class="text-5xl md:text-7xl font-black">R$ 149,90</span>
-                    <span class="text-blue-400 font-bold mt-1 text-sm md:text-lg italic">até 5x no cartão de crédito</span>
+            <div class="inline-flex flex-col items-center glass p-8 rounded-[2rem] border-blue-500/20 mb-12">
+                <span class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Licença Vitalícia</span>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-5xl md:text-7xl font-black text-white leading-none">R$ 149,90</span>
                 </div>
-            </div>
-
-            <div class="flex justify-center mb-16">
-                <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-2xl">
-                    <i class="fas fa-rocket"></i> COMEÇAR AGORA
-                </a>
+                <span class="text-blue-400 font-bold mt-2">Parcele em até 5x no cartão</span>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-6 max-w-7xl mx-auto space-y-24">
+    <section class="max-w-7xl mx-auto px-6 py-10 space-y-32">
         
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 order-2 md:order-1">
-                <div class="glass p-2 rounded-3xl card-shadow group">
-                    <img src="painel.png" alt="Painel" class="rounded-2xl w-full group-hover:scale-[1.01] transition-transform">
-                </div>
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-3/5 img-container">
+                <img src="painel.png" alt="Dashboard Principal" class="w-full">
             </div>
-            <div class="md:w-1/2 order-1 md:order-2 space-y-4">
-                <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-xl shadow-lg"><i class="fas fa-desktop"></i></div>
-                <h2 class="text-3xl md:text-4xl font-black uppercase italic italic">Gestão <span class="text-blue-500">Centralizada</span></h2>
-                <p class="text-slate-400 text-lg leading-relaxed">Visualize todo o seu inventário em uma interface Dark Mode intuitiva. Controle entradas, estados de conservação e localizações em tempo real.</p>
+            <div class="md:w-2/5 space-y-6">
+                <div class="inline-block p-3 bg-blue-600/10 rounded-2xl text-blue-500 mb-2"><i class="fas fa-layer-group text-2xl"></i></div>
+                <h2 class="text-4xl font-black italic uppercase">Controle <span class="text-blue-500 underline underline-offset-8 decoration-2">Total</span></h2>
+                <p class="text-slate-400 leading-relaxed text-lg">Visualize todo o seu inventário de forma clara. O painel central permite buscas rápidas e filtros por categoria, facilitando auditorias e conferências de bens em tempo real.</p>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 space-y-4 text-left">
-                <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-xl shadow-lg"><i class="fas fa-qrcode"></i></div>
-                <h2 class="text-3xl md:text-4xl font-black uppercase italic">Etiquetas <span class="text-blue-500">Inteligentes</span></h2>
-                <p class="text-slate-400 text-lg leading-relaxed">Gere etiquetas com QR Code automaticamente. Basta imprimir e colar nos ativos para ter rastreabilidade total via smartphone ou leitor.</p>
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-2/5 order-2 md:order-1 space-y-6">
+                <div class="inline-block p-3 bg-green-600/10 rounded-2xl text-green-500 mb-2"><i class="fas fa-plus-circle text-2xl"></i></div>
+                <h2 class="text-4xl font-black italic uppercase">Bens <span class="text-green-500 underline underline-offset-8 decoration-2">Novos e Usados</span></h2>
+                <p class="text-slate-400 leading-relaxed text-lg text-justify">Cadastro detalhado para cada tipo de ativo. Registre marcas, modelos, estados de conservação e localização exata. Perfeito para manter o histórico de vida útil dos equipamentos.</p>
             </div>
-            <div class="md:w-1/2">
-                <div class="glass p-2 rounded-3xl card-shadow group">
-                    <img src="etiquetas.png" alt="Etiquetas" class="rounded-2xl w-full group-hover:scale-[1.01] transition-transform">
-                </div>
+            <div class="md:w-3/5 order-1 md:order-2 grid grid-cols-2 gap-4">
+                <div class="img-container"><img src="TELA PATRIMONIO NOVO .png" alt="Patrimônio Novo"></div>
+                <div class="img-container"><img src="TELA PATRIMONIO USADO.png" alt="Patrimônio Usado"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-3/5 grid grid-cols-1 gap-6">
+                <div class="img-container"><img src="ETIQUETA EM LOTE.png" alt="Etiquetas em Lote"></div>
+                <div class="img-container"><img src="etiquetas.png" alt="Gerador QR"></div>
+            </div>
+            <div class="md:w-2/5 space-y-6">
+                <div class="inline-block p-3 bg-purple-600/10 rounded-2xl text-purple-500 mb-2"><i class="fas fa-qrcode text-2xl"></i></div>
+                <h2 class="text-4xl font-black italic uppercase text-nowrap">Rastreio <span class="text-purple-500 underline underline-offset-8 decoration-2">Inteligente</span></h2>
+                <p class="text-slate-400 leading-relaxed text-lg">Gere etiquetas com QR Code em lote ou individualmente. Cada item ganha uma identidade digital única que pode ser lida por qualquer smartphone, eliminando erros humanos.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-16">
+             <div class="md:w-2/5 space-y-6">
+                <div class="inline-block p-3 bg-red-600/10 rounded-2xl text-red-500 mb-2"><i class="fas fa-user-shield text-2xl"></i></div>
+                <h2 class="text-4xl font-black italic uppercase">Segurança e <span class="text-red-500 underline underline-offset-8 decoration-2">Acesso</span></h2>
+                <p class="text-slate-400 leading-relaxed text-lg text-justify">Controle quem acessa o sistema. Cadastro de novos usuários e ativação via licença garantem que seus dados patrimoniais fiquem protegidos e acessíveis apenas a pessoas autorizadas.</p>
+            </div>
+            <div class="md:w-3/5 grid grid-cols-2 gap-4">
+                <div class="img-container"><img src="Ativação.png" alt="Ativação"></div>
+                <div class="img-container"><img src="Cadastro-novo usuario.png" alt="Novo Usuário"></div>
             </div>
         </div>
 
     </section>
 
-    <section class="py-20 px-6 bg-black/20 mt-10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-center p-6">
-                <i class="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
-                <h3 class="font-bold text-xl uppercase italic">Segurança Local</h3>
-                <p class="text-slate-500 mt-2">Dados salvos em SQLite no seu PC. Sem taxas mensais de nuvem.</p>
-            </div>
-            <div class="text-center p-6">
-                <i class="fas fa-file-pdf text-4xl text-blue-500 mb-4"></i>
-                <h3 class="font-bold text-xl uppercase italic">Relatórios PDF</h3>
-                <p class="text-slate-500 mt-2">Exporte listagens completas para prestação de contas com um clique.</p>
-            </div>
-            <div class="text-center p-6">
-                <i class="fas fa-headset text-4xl text-blue-500 mb-4"></i>
-                <h3 class="font-bold text-xl uppercase italic">Suporte Help Tec</h3>
-                <p class="text-slate-500 mt-2">Acompanhamento direto via WhatsApp para instalação e uso.</p>
-            </div>
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border-blue-500/20">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 italic uppercase leading-tight">PROFISSIONALIZE SUA <span class="text-blue-500">GESTÃO HOJE</span></h2>
+            <p class="text-slate-400 mb-10 text-lg font-medium">Instalação imediata. Sem mensalidades. Suporte direto Help Tec.</p>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="gradient-blue text-white px-12 py-6 rounded-3xl font-black text-2xl hover:scale-105 transition-all shadow-2xl shadow-blue-500/30 inline-block uppercase tracking-tight italic">QUERO MEU ACESSO AGORA</a>
         </div>
     </section>
 
-    <footer class="py-12 px-6 text-center">
-        <p class="text-slate-600 text-xs uppercase tracking-[0.3em]">© 2026 HELP TEC SOLUÇÕES | LEANDRO SOUZA</p>
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-xs uppercase tracking-widest italic">
+        © 2026 HELP TEC SOLUÇÕES | LEANDRO SOUZA
     </footer>
 
 </body>
