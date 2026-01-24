@@ -10,9 +10,10 @@
         body { background-color: #000000; color: #e5e7eb; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .logo-gray { filter: grayscale(100%) opacity(0.7); }
-        .btn-blue { background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%); transition: all 0.3s ease; }
+        .btn-blue { background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%); transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-blue:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3); }
         .img-card { border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); background: #0a0a0a; width: 100%; height: auto; }
-        h1 { word-break: keep-all; }
+        strong { color: #3b82f6; font-weight: 800; } /* Estilo para o negrito azulado */
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -23,11 +24,11 @@
                 <img src="logo.png" alt="Logo" class="w-7 h-7 md:w-8 md:h-8 object-contain logo-gray">
                 <span class="font-black text-[10px] md:text-xl tracking-tighter uppercase text-white leading-tight">SISTEMA CONTROLE DE <br class="md:hidden"> <span class="text-blue-600">PATRIMÔNIO</span></span>
             </div>
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue text-white px-4 py-2 rounded-lg font-bold text-[10px] md:text-xs uppercase tracking-widest shadow-lg">Comprar</a>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue text-white px-4 py-2 rounded-lg font-bold text-[10px] md:text-xs uppercase shadow-lg">Comprar</a>
         </div>
     </nav>
 
-    <section class="pt-32 md:pt-44 pb-16 px-4 md:px-6 text-center">
+    <section class="pt-32 md:pt-44 pb-16 px-4 md:px-6 text-center border-b border-white/5">
         <div class="max-w-5xl mx-auto">
             <h1 class="text-3xl md:text-8xl font-black mb-6 leading-tight text-white tracking-tighter uppercase italic">
                 SISTEMA CONTROLE DE <br><span class="text-blue-600">PATRIMÔNIO</span>
@@ -45,22 +46,26 @@
                     </div>
                 </div>
                 
-                <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue w-full max-w-xs md:max-w-md py-5 rounded-2xl text-lg md:text-2xl font-black text-white uppercase italic shadow-2xl flex flex-col items-center leading-none">
+                <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue w-full max-w-xs md:max-w-md py-6 rounded-2xl text-lg md:text-2xl font-black text-white uppercase italic shadow-2xl flex flex-col leading-none">
                     <span>ADQUIRIR AGORA</span>
-                    <span class="text-[9px] tracking-[0.1em] font-normal mt-2 opacity-80 uppercase">Acesso imediato • Parcelamento disponível</span>
+                    <span class="text-[9px] tracking-[0.1em] font-normal mt-2 opacity-80 uppercase">Acesso imediato • Parcelamento Hotmart</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 md:px-6 py-10 space-y-20 md:space-y-40">
+    <section class="max-w-5xl mx-auto px-4 md:px-6 py-10 space-y-24 md:space-y-40">
 
         <div class="flex flex-col gap-6">
             <img src="painel.png" class="img-card shadow-xl" alt="Interface">
             <div class="text-center md:text-left">
                 <h2 class="text-2xl md:text-5xl font-black text-white italic uppercase mb-3">Escalabilidade <span class="text-blue-600">Robusta</span></h2>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed italic mb-4 font-bold uppercase tracking-tighter">Suporta mais de 50.000 itens cadastrados</p>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">Gerencie grandes inventários com fluidez total. O motor do banco de dados está otimizado para suportar mais de 50 mil itens na tabela sem perda de velocidade, permitindo pesquisas instantâneas e filtragem por estado de conservação, marca ou localização.</p>
+                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">
+                    Gerencie grandes inventários com fluidez total. O motor do banco de dados está otimizado para suportar <strong>mais de 50.000 itens na tabela</strong> sem perda de velocidade, permitindo pesquisas instantâneas e filtragem por estado de conservação, marca ou localização.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start">
+                    <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue px-8 py-4 rounded-xl font-black text-sm uppercase italic">Quero esse Sistema <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
 
@@ -72,7 +77,9 @@
             </div>
             <div class="text-center md:text-left">
                 <h2 class="text-2xl md:text-5xl font-black text-white italic uppercase mb-3">Customização <span class="text-blue-600">Total</span></h2>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">O sistema se adapta à sua realidade. Nas configurações, você tem autonomia total para **alterar o nome da instituição** que aparece no cabeçalho das etiquetas e relatórios. Além disso, garante a segurança administrativa permitindo a **alteração de senhas e usuários** a qualquer momento, mantendo o controle de acesso sempre atualizado.</p>
+                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">
+                    O sistema se adapta à sua realidade. Nas configurações, você tem autonomia total para <strong>alterar o nome da instituição</strong> que aparece no cabeçalho das etiquetas e relatórios. Além disso, garante a segurança administrativa permitindo a <strong>alteração de senhas e usuários</strong> a qualquer momento.
+                </p>
             </div>
         </div>
 
@@ -82,9 +89,13 @@
                 <img src="etiquetas.png" class="img-card" alt="Individual">
             </div>
             <div class="text-center md:text-left">
-                <h2 class="text-2xl md:text-5xl font-black text-white italic uppercase mb-3 text-nowrap">Etiquetas <span class="text-blue-600">40x20mm</span></h2>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed italic mb-4 font-bold uppercase tracking-tighter">Padrão Profissional QR Code</p>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">Otimize a identificação física com etiquetas no tamanho padrão de **40x20mm**. O gerador de QR Code integrado permite a impressão individual ou em lote, garantindo que cada bem tenha sua identidade digital rastreável via smartphone, eliminando erros de inventário manual.</p>
+                <h2 class="text-2xl md:text-5xl font-black text-white italic uppercase mb-3">Etiquetas <span class="text-blue-600">QR Code</span></h2>
+                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">
+                    Otimize a identificação física com etiquetas no tamanho padrão de <strong>40x20mm</strong>. O gerador de QR Code integrado permite a impressão individual ou em lote, garantindo que cada bem tenha sua identidade digital rastreável via smartphone.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start">
+                    <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue px-8 py-4 rounded-xl font-black text-sm uppercase italic">Comprar Licença Vitalícia</a>
+                </div>
             </div>
         </div>
 
@@ -95,25 +106,31 @@
             </div>
             <div class="text-center md:text-left">
                 <h2 class="text-2xl md:text-5xl font-black text-white italic uppercase mb-3">Segurança e <span class="text-blue-600">Rastreio</span></h2>
-                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">Registre saídas de patrimônio com facilidade e gere termos de responsabilidade em PDF automaticamente. O sistema documenta o destino e o responsável pelo item, gerando relatórios precisos para auditorias imediatas.</p>
+                <p class="text-slate-400 text-sm md:text-lg leading-relaxed text-justify">
+                    Registre saídas de patrimônio com facilidade e gere <strong>termos de responsabilidade em PDF automaticamente</strong>. O sistema documenta o destino e o responsável pelo item, gerando relatórios precisos para auditorias imediatas.
+                </p>
             </div>
         </div>
 
     </section>
 
-    <footer class="py-16 border-t border-white/5 bg-black px-4 text-center">
+    <section class="py-20 px-4 text-center border-t border-white/5">
+        <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[3rem] border-blue-600/30 shadow-2xl">
+            <h2 class="text-3xl md:text-6xl font-black mb-8 italic uppercase tracking-tighter text-white">Domine sua gestão <br><span class="text-blue-600">ainda hoje</span></h2>
+            <p class="text-slate-400 mb-10 text-lg">Aproveite o valor promocional de lançamento com parcelamento em 5x.</p>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-blue px-14 py-6 rounded-2xl text-xl md:text-3xl font-black text-white uppercase italic shadow-2xl">
+                GARANTIR ACESSO AGORA
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-black px-4 text-center">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center gap-2 justify-center mb-6">
                 <img src="logo.png" class="w-5 h-5 logo-gray">
                 <span class="font-bold text-slate-500 tracking-[0.2em] uppercase text-[10px]">Help Tec Soluções</span>
             </div>
-            
-            <div class="flex justify-center gap-8 mb-8">
-                <a href="https://wa.me/5547988647259" class="text-slate-600 hover:text-white text-xl transition-all"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:leandro.souza22oliveira@gmail.com" class="text-slate-600 hover:text-white text-xl transition-all"><i class="fas fa-envelope"></i></a>
-            </div>
-
-            <p class="text-slate-700 text-[8px] md:text-[10px] tracking-[0.3em] uppercase font-black leading-relaxed">
+            <p class="text-slate-700 text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-black leading-relaxed">
                 Todos os direitos reservados 2026 © SISTEMA CONTROLE DE PATRIMÔNIO
             </p>
         </div>
