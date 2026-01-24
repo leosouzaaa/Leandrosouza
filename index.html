@@ -3,112 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrimônio Blindado v1 | Help Tec Soluções</title>
+    <title>Sistema Controle de Patrimônio | Help Tec</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Fundo Preto Profundo conforme solicitado */
-        body { background-color: #0d0d0d; color: #e5e7eb; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .gradient-blue { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); }
-        .img-card { border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.08); overflow: hidden; background: #141414; }
-        .feature-title { font-family: 'Arial Black', sans-serif; font-style: italic; text-transform: uppercase; letter-spacing: -0.05em; }
+        body { background-color: #050505; color: #d1d5db; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-blue { background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%); }
+        .img-zoom { transition: transform 0.3s ease; cursor: zoom-in; }
+        .img-zoom:active { transform: scale(1.5); z-index: 100; position: relative; }
+        .feature-card { background: #0f0f0f; border: 1px solid #1f1f1f; transition: border-color 0.3s; }
+        .feature-card:hover { border-color: #3b82f6; }
     </style>
 </head>
 <body class="font-sans antialiased">
 
     <nav class="fixed w-full z-50 glass">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
                 <img src="logo.png" alt="Help Tec" class="w-8 h-8 object-contain">
-                <span class="font-black text-lg tracking-tighter uppercase text-white leading-none">Help <span class="text-blue-600">Tec</span></span>
+                <span class="font-bold text-base md:text-lg tracking-widest uppercase text-white">SISTEMA <span class="text-blue-600">PATRIMÔNIO</span></span>
             </div>
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="gradient-blue text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-tighter shadow-lg">Comprar</a>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="bg-blue-700 text-white px-5 py-2 rounded-lg font-bold text-xs uppercase transition-all hover:bg-blue-600">Adquirir</a>
         </div>
     </nav>
 
     <section class="pt-32 pb-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight text-white feature-title">PATRIMÔNIO <br><span class="text-blue-600">EFICIENTE</span></h1>
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl md:text-6xl font-black mb-6 text-white leading-tight uppercase italic tracking-tighter">
+                SISTEMA CONTROLE DE <span class="text-blue-600">PATRIMÔNIO</span>
+            </h1>
+            <p class="text-slate-400 text-base md:text-lg mb-8 max-w-3xl mx-auto">
+                Uma solução robusta e intuitiva para a gestão completa de ativos. Ideal para instituições que buscam segurança, rastreabilidade e relatórios precisos em um ambiente digital moderno.
+            </p>
             
-            <div class="inline-block glass p-6 md:p-10 rounded-[2.5rem] border-blue-600/20 mb-10">
-                <p class="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-3">Licença Vitalícia - Versão 1.0</p>
-                <div class="flex flex-col items-center">
-                    <span class="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter">R$ 149,90</span>
-                    <span class="text-blue-500 font-bold mt-3 text-sm md:text-xl italic">Até 5x no cartão de crédito</span>
-                </div>
-            </div>
-
-            <div class="flex justify-center">
-                <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="bg-white text-black px-10 py-5 rounded-2xl font-black text-lg hover:bg-blue-600 hover:text-white transition-all shadow-2xl flex items-center gap-3">
-                    <i class="fas fa-shopping-cart"></i> ADQUIRIR AGORA
-                </a>
+            <div class="inline-flex flex-col items-center px-8 py-4 rounded-2xl border border-white/10 mb-10 bg-white/5">
+                <span class="text-slate-500 text-[10px] uppercase font-bold tracking-widest">Valor do Investimento</span>
+                <span class="text-3xl md:text-4xl font-bold text-white mt-1">R$ 149,90</span>
+                <span class="text-blue-500 text-xs font-medium">Em até 5x no cartão</span>
             </div>
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto px-6 py-10 space-y-20 md:space-y-32">
+    <section class="max-w-7xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="feature-card p-6 rounded-2xl">
+                <i class="fas fa-check-circle text-blue-500 mb-4 text-2xl"></i>
+                <h3 class="text-white font-bold mb-2 uppercase">Eficiência Operacional</h3>
+                <p class="text-sm text-slate-400">Reduza em até 70% o tempo gasto em inventários manuais através da automação por etiquetas inteligentes.</p>
+            </div>
+            <div class="feature-card p-6 rounded-2xl">
+                <i class="fas fa-history text-blue-500 mb-4 text-2xl"></i>
+                <h3 class="text-white font-bold mb-2 uppercase">Histórico Imutável</h3>
+                <p class="text-sm text-slate-400">Mantenha o rastro completo de cada bem, desde a entrada no estoque até a baixa final ou transferência.</p>
+            </div>
+            <div class="feature-card p-6 rounded-2xl">
+                <i class="fas fa-print text-blue-500 mb-4 text-2xl"></i>
+                <h3 class="text-white font-bold mb-2 uppercase">Padronização</h3>
+                <p class="text-sm text-slate-400">Gere relatórios e etiquetas em um padrão profissional pronto para auditorias e fiscalizações governamentais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-20 space-y-24">
         
-        <div class="flex flex-col gap-6">
-            <div class="img-card shadow-2xl shadow-black">
-                <img src="painel.png" alt="Dashboard" class="w-full">
+        <div class="flex flex-col gap-8">
+            <div class="rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+                <img src="TELA CONFIGURAÇÃO.png" alt="Banco de Dados" class="w-full img-zoom">
             </div>
-            <div class="px-2">
-                <h2 class="text-2xl md:text-4xl font-black feature-title text-blue-500 mb-3">Painel Administrativo</h2>
-                <p class="text-slate-400 text-base md:text-xl leading-relaxed">Centralize toda a gestão. Tenha uma visão clara de cada item do seu estoque com filtros avançados de busca, permitindo localizar qualquer ativo em segundos.</p>
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic">Arquitetura de Dados <span class="text-blue-600">Segura</span></h2>
+                <p class="text-slate-400 text-justify leading-relaxed">
+                    Diferente de sistemas em nuvem que cobram mensalidades e deixam seus dados vulneráveis, o **Sistema Controle de Patrimônio** utiliza um banco de dados **SQLite local**. Isso significa que todas as informações da sua instituição ficam armazenadas no seu hardware. O banco de dados é leve, não exige servidores complexos e oferece alta velocidade de resposta, funcionando perfeitamente de forma offline após a ativação.
+                </p>
             </div>
         </div>
 
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-8">
+            <div class="rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+                <img src="painel.png" alt="Painel Principal" class="w-full img-zoom">
+            </div>
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic">Painel de <span class="text-blue-600">Monitoramento</span></h2>
+                <p class="text-slate-400 text-justify leading-relaxed">
+                    O módulo principal oferece uma interface Dark Mode de alto contraste, projetada para longas jornadas de trabalho sem cansaço visual. Através dele, você gerencia o estoque de bens novos e usados, podendo filtrar por categoria, estado de conservação ou data de entrada. A busca inteligente permite encontrar qualquer ativo digitando apenas parte do nome ou código.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="img-card shadow-2xl shadow-black">
-                    <img src="TELA PATRIMONIO NOVO .png" alt="Novo">
-                </div>
-                <div class="img-card shadow-2xl shadow-black">
-                    <img src="TELA PATRIMONIO USADO.png" alt="Usado">
-                </div>
+                <img src="TELA SAIDA DE PARIMONIO.png" alt="Saída" class="rounded-2xl border border-white/5 img-zoom">
+                <img src="RELATORIO.png" alt="Relatório" class="rounded-2xl border border-white/5 img-zoom">
             </div>
-            <div class="px-2">
-                <h2 class="text-2xl md:text-4xl font-black feature-title text-blue-500 mb-3">Cadastro de Bens</h2>
-                <p class="text-slate-400 text-base md:text-xl leading-relaxed">Diferencie ativos novos de itens já em uso. Registre fotos, números de série, marcas, modelos e o estado atual de conservação para um inventário impecável.</p>
-            </div>
-        </div>
-
-        <div class="flex flex-col gap-6">
-            <div class="img-card shadow-2xl shadow-black">
-                <img src="ETIQUETA EM LOTE.png" alt="Etiquetas em Lote" class="w-full">
-            </div>
-            <div class="px-2 text-right md:text-left">
-                <h2 class="text-2xl md:text-4xl font-black feature-title text-blue-500 mb-3">Etiquetas e QR Code</h2>
-                <p class="text-slate-400 text-base md:text-xl leading-relaxed">Gere etiquetas inteligentes em lote. Cada patrimônio recebe um código único que facilita auditorias externas e transferências de setor sem necessidade de papéis.</p>
-            </div>
-        </div>
-
-        <div class="flex flex-col gap-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="img-card shadow-2xl shadow-black">
-                    <img src="Ativação.png" alt="Segurança">
-                </div>
-                <div class="img-card shadow-2xl shadow-black">
-                    <img src="Cadastro-novo usuario.png" alt="Usuários">
-                </div>
-            </div>
-            <div class="px-2">
-                <h2 class="text-2xl md:text-4xl font-black feature-title text-blue-500 mb-3">Acesso e Ativação</h2>
-                <p class="text-slate-400 text-base md:text-xl leading-relaxed">Sistema protegido por chaves de licença individuais. Cadastre múltiplos usuários administradores e garanta que apenas pessoas autorizadas manipulem os dados da instituição.</p>
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic">Controle de <span class="text-blue-600">Movimentação</span></h2>
+                <p class="text-slate-400 text-justify leading-relaxed">
+                    Gerencie a saída de bens com precisão. O sistema registra o destino de cada ativo, gerando automaticamente relatórios detalhados em formato PDF. Esses documentos são essenciais para a prestação de contas e para garantir que nenhum equipamento seja extraviado durante mudanças de setor ou manutenções.
+                </p>
             </div>
         </div>
 
     </section>
 
-    <footer class="py-20 px-6 text-center">
-        <div class="max-w-2xl mx-auto glass p-10 rounded-[2rem] border-white/5">
-            <p class="text-slate-400 mb-8 font-medium">© 2026 HELP TEC SOLUÇÕES | LEANDRO SOUZA</p>
-            <div class="flex justify-center gap-8">
-                <a href="https://wa.me/5547988647259" class="text-slate-500 hover:text-white transition-colors text-2xl"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:leandro.souza22oliveira@gmail.com" class="text-slate-500 hover:text-white transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
-            </div>
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="bg-blue-700 text-white px-12 py-5 rounded-xl font-black text-xl hover:bg-blue-600 transition-all shadow-2xl uppercase tracking-tighter italic inline-block">
+                ADQUIRIR SISTEMA AGORA
+            </a>
+            <p class="mt-6 text-slate-500 text-sm">Instalação imediata via download após a confirmação do pagamento.</p>
         </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-[10px] md:text-xs uppercase tracking-[0.5em] font-bold">
+            Todos os direitos reservados 2026 - Help Tec Soluções Inteligentes - Leandro Souza
+        </p>
     </footer>
 
 </body>
