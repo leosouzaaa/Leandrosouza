@@ -3,304 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA PATRIMÔNIO PRO | Help Tec</title>
+    <title>SISTEMA PATRIMÔNIO FÁCIL | Help Tec</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --neon-blue: #00d2ff;
-            --deep-blue: #0041ff;
-            --dark-bg: #050505;
-        }
         body { 
-            background-color: var(--dark-bg); 
+            background-color: #050505; 
             color: #f3f4f6; 
             font-family: 'Rajdhani', sans-serif;
-            background-image: radial-gradient(circle at 50% -20%, #0041ff22 0%, transparent 50%);
+            background-image: radial-gradient(circle at 50% -20%, #0041ff15 0%, transparent 50%);
         }
-        .font-cyber { font-family: 'Orbitron', sans-serif; }
+        .font-title { font-family: 'Orbitron', sans-serif; }
         
         .glass-card { 
             background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(20px); 
+            backdrop-filter: blur(15px); 
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .glass-card:hover {
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .neon-text {
-            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
-        }
-
-        .btn-cyber {
-            background: linear-gradient(90deg, var(--deep-blue), var(--neon-blue));
-            position: relative;
-            overflow: hidden;
             transition: all 0.3s ease;
         }
-        .btn-cyber:hover {
-            box-shadow: 0 0 40px rgba(0, 65, 255, 0.6);
-            letter-spacing: 2px;
+
+        .btn-gradient {
+            background: linear-gradient(90deg, #0041ff, #00d2ff);
+            transition: all 0.3s ease;
         }
-        .btn-cyber::after {
-            content: '';
-            position: absolute;
-            top: -50%; font-family: 'Orbitron', sans-serif;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255,255,255,0.1);
-            transform: rotate(45deg);
-            transition: 0.5s;
+        .btn-gradient:hover {
+            box-shadow: 0 0 30px rgba(0, 65, 255, 0.5);
+            transform: scale(1.02);
         }
 
-        .img-container {
-            position: relative;
-            border-radius: 20px;
+        .img-tech {
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            transition: all 0.5s ease;
+        }
+        .img-tech:hover { border-color: #3b82f6; transform: scale(1.01); }
+
+        /* Estilo para a descrição oculta */
+        .info-desc {
+            max-height: 0;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transition: max-height 0.5s ease-out, margin 0.3s ease;
+            font-size: 0.875rem;
+            color: #94a3b8;
         }
-        .img-container::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 2px solid transparent;
-            background: linear-gradient(45deg, var(--deep-blue), transparent, var(--neon-blue)) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
+        .card-active .info-desc {
+            max-height: 100px;
+            margin-top: 12px;
         }
-
-        .floating { animation: float 6s ease-in-out infinite; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto glass-card rounded-2xl px-6 py-3 flex justify-between items-center">
+    <nav class="fixed w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass-card rounded-2xl px-4 md:px-6 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="relative">
-                    <img src="logo.png" alt="Logo" class="w-10 h-10 object-contain neon-text">
-                    <div class="absolute -inset-1 bg-blue-500 blur-md opacity-30 rounded-full animate-pulse"></div>
-                </div>
+                <img src="logo.png" alt="Logo" class="w-8 h-8 object-contain">
                 <div class="flex flex-col">
-                    <span class="font-cyber text-sm md:text-lg font-black tracking-widest text-white leading-none">PATRIMÔNIO<span class="text-blue-500 underline">PRO</span></span>
-                    <span class="text-[8px] uppercase tracking-[0.4em] text-blue-400 font-bold">Help Tec Intelligence</span>
+                    <span class="font-title text-sm md:text-base font-bold tracking-tighter text-white">CONTROLE DE <span class="text-blue-500">PATRIMÔNIO</span></span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] text-blue-400 font-bold italic">Help Tec Soluções</span>
                 </div>
             </div>
-            
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
-                <a href="#features" class="hover:text-blue-400 transition-colors">Recursos</a>
-                <a href="#screenshots" class="hover:text-blue-400 transition-colors">Interface</a>
-                <a href="#pricing" class="hover:text-blue-400 transition-colors">Preço</a>
-            </div>
-
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-cyber text-white px-6 py-2 rounded-xl font-cyber text-[10px] md:text-xs font-bold uppercase tracking-widest">
-                Comprar <i class="fas fa-bolt ml-2"></i>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-gradient text-white px-5 py-2 rounded-xl font-bold text-[10px] md:text-xs uppercase tracking-widest">
+                COMPRAR AGORA
             </a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-        <div class="absolute top-1/4 left-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full"></div>
-        <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-cyan-600/10 blur-[120px] rounded-full"></div>
-
+    <section class="relative min-h-screen flex items-center pt-24 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-left z-10">
-                <div class="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/5 text-blue-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-6">
-                    Versão 2026 • Tecnologia Avançada
-                </div>
-                <h1 class="text-5xl md:text-8xl font-cyber font-black mb-8 leading-[0.9] tracking-tighter text-white uppercase italic">
-                    A NOVA ERA DO <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400 neon-text">PATRIMÔNIO</span>
+            <div class="text-left">
+                <h1 class="text-4xl md:text-7xl font-title font-black mb-6 leading-none text-white uppercase italic">
+                    ORGANIZE TUDO EM <br><span class="text-blue-500">SEGUNDOS</span>
                 </h1>
-                <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-lg leading-relaxed font-light">
-                    Abandone planilhas obsoletas. Experimente um motor de gestão de alto desempenho com <span class="text-blue-400 font-bold">rastreamento QR Code em tempo real</span> e relatórios automáticos.
+                <p class="text-slate-400 text-lg md:text-xl mb-8 max-w-lg leading-relaxed font-medium text-justify">
+                    O sistema mais simples e eficiente para controlar móveis, eletrônicos e equipamentos. Ideal para prefeituras, empresas e escolas que precisam de organização profissional.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-cyber px-10 py-5 rounded-2xl text-xl font-cyber font-black text-white uppercase italic shadow-2xl flex flex-col items-center">
-                        <span>OBTER ACESSO PRO</span>
-                        <span class="text-[8px] tracking-[0.2em] opacity-70 mt-1 font-normal">INSTALAÇÃO IMEDIATA</span>
-                    </a>
-                    <div class="flex items-center gap-4 px-6 py-4 glass-card rounded-2xl">
-                        <i class="fas fa-shield-alt text-2xl text-blue-500"></i>
-                        <div class="flex flex-col">
-                            <span class="text-xs font-bold text-white uppercase">Vitalício</span>
-                            <span class="text-[10px] text-slate-500 uppercase">Sem Mensalidades</span>
-                        </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span class="font-semibold">Sem Mensalidades</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span class="font-semibold">Fácil de Usar</span>
                     </div>
                 </div>
+
+                <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-gradient w-full md:w-auto px-12 py-5 rounded-2xl text-xl font-title font-bold text-white uppercase italic shadow-2xl inline-flex items-center justify-center gap-3">
+                    GARANTIR MINHA LICENÇA <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="relative floating">
-                <div class="img-container">
-                    <img src="painel.png" class="w-full grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Dashboard Principal">
-                </div>
-                <div class="absolute -top-6 -right-6 glass-card p-4 rounded-2xl animate-pulse">
-                    <i class="fas fa-qrcode text-3xl text-blue-400"></i>
-                </div>
-                <div class="absolute -bottom-6 -left-6 glass-card p-4 rounded-2xl animate-bounce">
-                    <span class="text-blue-500 font-cyber font-bold">50K+</span>
-                    <p class="text-[8px] uppercase tracking-tighter">Itens Suportados</p>
-                </div>
+            <div class="relative group">
+                <img src="painel.png" class="img-tech shadow-2xl group-hover:shadow-blue-500/20" alt="Painel Principal">
             </div>
         </div>
     </section>
 
-    <section id="features" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="glass-card p-8 rounded-[2rem] text-center">
-                <h3 class="text-4xl font-cyber font-black text-white mb-2">0.02s</h3>
-                <p class="text-xs uppercase tracking-widest text-blue-500 font-bold">Busca Instantânea</p>
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-title font-bold text-white">0.02s</h3>
+                    <i class="fas fa-search text-blue-500"></i>
+                </div>
+                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Busca Instantânea</p>
+                <div class="info-desc">
+                    Encontre qualquer item no meio de milhares em milésimos de segundo. Basta digitar uma letra e o sistema localiza na hora.
+                </div>
             </div>
-            <div class="glass-card p-8 rounded-[2rem] text-center">
-                <h3 class="text-4xl font-cyber font-black text-white mb-2">QR</h3>
-                <p class="text-xs uppercase tracking-widest text-blue-500 font-bold">Geração Automática</p>
+            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-title font-bold text-white">QR CODE</h3>
+                    <i class="fas fa-qrcode text-blue-500"></i>
+                </div>
+                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Etiquetas Prontas</p>
+                <div class="info-desc">
+                    O sistema cria sozinho o código para cada item. Você imprime e cola no móvel ou computador para rastrear pelo celular.
+                </div>
             </div>
-            <div class="glass-card p-8 rounded-[2rem] text-center">
-                <h3 class="text-4xl font-cyber font-black text-white mb-2">PDF</h3>
-                <p class="text-xs uppercase tracking-widest text-blue-500 font-bold">Relatórios Fiscais</p>
+            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-title font-bold text-white">OFFLINE</h3>
+                    <i class="fas fa-database text-blue-500"></i>
+                </div>
+                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Dados Seguros</p>
+                <div class="info-desc">
+                    Seus dados ficam gravados no seu computador, não na internet. Isso garante total privacidade e segurança das suas informações.
+                </div>
             </div>
-            <div class="glass-card p-8 rounded-[2rem] text-center">
-                <h3 class="text-4xl font-cyber font-black text-white mb-2">SQL</h3>
-                <p class="text-xs uppercase tracking-widest text-blue-500 font-bold">Banco de Dados Seguro</p>
+            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-title font-bold text-white">PDF</h3>
+                    <i class="fas fa-file-pdf text-blue-500"></i>
+                </div>
+                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Relatórios em 1 Clique</p>
+                <div class="info-desc">
+                    Gere documentos prontos para impressão com a lista de todos os bens para conferências e auditorias.
+                </div>
             </div>
         </div>
+        <p class="text-center text-slate-500 text-[10px] mt-4 uppercase tracking-[0.2em] font-bold italic underline">Clique nos itens acima para saber mais</p>
     </section>
 
-    <section id="screenshots" class="py-24 px-6 bg-[#080808]">
+    <section class="py-20 px-6 bg-[#080808]">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-6xl font-cyber font-black italic uppercase tracking-tighter text-white mb-4">ENGINE DE <span class="text-blue-500">ALTO NÍVEL</span></h2>
-                <p class="text-slate-500 uppercase tracking-[0.5em] text-xs">Interface Intuitiva • UX Minimalista</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-title font-bold text-white italic uppercase tracking-tighter">TECNOLOGIA QUE <span class="text-blue-500">FACILITA O TRABALHO</span></h2>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="space-y-12">
-                    <div class="glass-card p-8 rounded-[2.5rem] flex gap-6 border-l-4 border-l-blue-600">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400 shrink-0">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-cyber text-lg text-white uppercase mb-2">Gestão de Inventário</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Telas dedicadas para itens <span class="text-blue-400">Novos, Usados e Saídas</span>. Controle total sobre o estado de cada bem.</p>
-                        </div>
-                    </div>
-                    <div class="glass-card p-8 rounded-[2.5rem] flex gap-6">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400 shrink-0">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-cyber text-lg text-white uppercase mb-2">Configuração Global</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Personalize o nome da sua instituição e as credenciais administrativas em um painel centralizado.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="TELA PATRIMONIO NOVO .png" class="img-container rounded-2xl" alt="Novo">
-                    <img src="TELA PATRIMONIO USADO.png" class="img-container rounded-2xl" alt="Usado">
-                    <img src="TELA SAIDA DE PARIMONIO.png" class="img-container rounded-2xl" alt="Saída">
-                    <img src="TELA CONFIGURAÇÃO.png" class="img-container rounded-2xl" alt="Configuração">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6">
-        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[100px]"></div>
-            
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-cyber font-black text-white italic uppercase mb-6 leading-none">Rastreamento por <br><span class="text-blue-500">QR Code Híbrido</span></h2>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-check-circle text-blue-500"></i> Impressão Térmica 40x20mm
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-check-circle text-blue-500"></i> Geração de Etiquetas em Lote
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-check-circle text-blue-500"></i> Identidade Digital Exclusiva (PAT2026XX)
-                        </li>
-                    </ul>
-                    <img src="etiquetas.png" class="mt-8 rounded-xl border border-white/10" alt="Etiqueta">
-                </div>
-                <div class="relative">
-                    <img src="ETIQUETA EM LOTE.png" class="img-container" alt="Etiqueta Lote">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Aumente sua produtividade</span>
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h4 class="font-title text-blue-500 mb-2">CONTROLE DE ENTRADA E SAÍDA</h4>
+                        <p class="text-slate-400 text-sm">Saiba exatamente quem retirou um item e quando ele foi devolvido. Evite perdas e extravios de patrimônio público ou privado.</p>
                     </div>
+                    <img src="TELA PATRIMONIO NOVO .png" class="img-tech w-full" alt="Cadastro Novo">
+                    <img src="TELA SAIDA DE PARIMONIO.png" class="img-tech w-full" alt="Tela Saída">
+                </div>
+                <div class="space-y-6">
+                    <img src="TELA PATRIMONIO USADO.png" class="img-tech w-full" alt="Cadastro Usado">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
+                        <h4 class="font-title text-blue-500 mb-2">ECONOMIA DE TEMPO</h4>
+                        <p class="text-slate-400 text-sm">O que levava dias para contar manualmente, agora é feito em minutos com o auxílio do rastreamento por etiquetas inteligentes.</p>
+                    </div>
+                    <img src="RELATORIO.png" class="img-tech w-full" alt="Relatório PDF">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 px-6 text-center">
-        <div class="max-w-3xl mx-auto glass-card p-12 md:p-20 rounded-[4rem] relative">
-            <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-blue-600 px-8 py-2 rounded-full font-cyber text-[10px] font-black uppercase tracking-widest">Oferta de Lançamento</div>
-            
-            <h2 class="text-3xl md:text-6xl font-cyber font-black mb-4 text-white uppercase italic italic tracking-tighter">PREÇO <span class="text-blue-500">ÚNICO</span></h2>
-            <p class="text-slate-400 mb-12 uppercase tracking-[0.3em] text-[10px]">Sem mensalidades • Sem taxas ocultas</p>
-            
-            <div class="flex flex-col items-center mb-12">
-                <span class="text-slate-500 line-through text-2xl mb-2">R$ 299,90</span>
-                <div class="flex items-start">
-                    <span class="text-4xl font-bold text-blue-500 mr-2">R$</span>
-                    <span class="text-9xl font-cyber font-black text-white leading-none tracking-tighter">149,90</span>
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center font-title text-2xl md:text-4xl text-white mb-12 italic uppercase">SEGURANÇA EM <span class="text-blue-500">CADA ETAPA</span></h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-4">
+                    <img src="Ativação.png" class="img-tech mb-4" alt="Ativação">
+                    <p class="font-bold text-white uppercase text-sm">Ativação por Chave Mestre</p>
                 </div>
-                <div class="mt-6 bg-blue-500/10 border border-blue-500/20 rounded-full px-6 py-2 text-blue-400 font-bold uppercase text-sm">
-                    5x de R$ 33,19 no cartão
+                <div class="text-center p-4">
+                    <img src="Cadastro-novo usuario.png" class="img-tech mb-4" alt="Usuário">
+                    <p class="font-bold text-white uppercase text-sm">Controle de Usuários</p>
+                </div>
+                <div class="text-center p-4">
+                    <img src="TELA CONFIGURAÇÃO.png" class="img-tech mb-4" alt="Configuração">
+                    <p class="font-bold text-white uppercase text-sm">Personalização da Empresa</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-cyber w-full py-8 rounded-3xl text-3xl font-cyber font-black text-white uppercase italic shadow-2xl">
-                REIVINDICAR MINHA LICENÇA
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1">
+                <h2 class="text-3xl font-title font-bold text-white uppercase italic mb-4">ETIQUETAS <span class="text-blue-500">PROFISSIONAIS</span></h2>
+                <p class="text-slate-400 mb-6">O sistema gera folhas de etiquetas completas. Basta imprimir e identificar seus ativos. Funciona em qualquer impressora comum ou térmica.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="etiquetas.png" class="rounded-lg border border-white/10" alt="Etiqueta Individual">
+                    <img src="ETIQUETA EM LOTE.png" class="rounded-lg border border-white/10" alt="Etiqueta em Lote">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center">
+        <div class="max-w-2xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] border-blue-500/30">
+            <h2 class="text-3xl md:text-5xl font-title font-bold mb-4 text-white uppercase italic italic tracking-tighter">O MELHOR <span class="text-blue-500">INVESTIMENTO</span></h2>
+            <div class="flex flex-col items-center mb-8">
+                <span class="text-slate-500 line-through text-xl">R$ 299,90</span>
+                <span class="text-7xl md:text-8xl font-title font-bold text-white tracking-tighter">R$ 149,90</span>
+                <p class="text-blue-400 font-bold uppercase tracking-widest mt-2">Pagamento Único • Sem Mensalidade</p>
+            </div>
+            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-gradient w-full py-6 rounded-2xl text-2xl font-title font-bold text-white uppercase italic">
+                COMPRAR AGORA <i class="fas fa-lock ml-2"></i>
             </a>
-            
-            <div class="mt-10 flex justify-center gap-12 grayscale opacity-50">
-                <img src="Ativação.png" class="h-6 object-contain" alt="Ativação">
-                <img src="Cadastro-novo usuario.png" class="h-6 object-contain" alt="Segurança">
-            </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-black border-t border-white/5 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-            <div class="flex flex-col items-center md:items-start">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="logo.png" class="w-8 h-8 opacity-50">
-                    <span class="font-cyber font-bold text-slate-500 tracking-[0.2em] uppercase text-xs text-white">Help Tec Soluções</span>
-                </div>
-                <p class="text-slate-700 text-[10px] tracking-[0.4em] uppercase font-black">© 2026 Tecnologia Leandro Souza</p>
+    <footer class="py-16 bg-black border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center text-center md:text-left">
+            <div>
+                <img src="logo.png" class="w-10 h-10 mx-auto md:mx-0 mb-4">
+                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest leading-loose">
+                    Desenvolvido por Leandro Souza<br>
+                    © 2026 Help Tec Soluções Inteligentes
+                </p>
             </div>
             
-            <div class="flex gap-10">
-                <div class="text-right">
-                    <h5 class="text-blue-500 text-[10px] font-black uppercase mb-4 tracking-[0.2em]">Contato Direto</h5>
-                    <p class="text-slate-400 text-xs">suporte@helptec.com</p>
+            <div class="flex flex-col gap-3 items-center">
+                <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-2">Links Oficiais</h5>
+                <div class="flex gap-6 text-xl">
+                    <a href="https://www.instagram.com/_leosouuzaa/" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/leosouzaaa" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/5547988647259" target="_blank" class="text-slate-400 hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <div class="text-right">
-                    <h5 class="text-blue-500 text-[10px] font-black uppercase mb-4 tracking-[0.2em]">Social</h5>
-                    <div class="flex gap-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 items-center md:items-end">
+                <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-2">Suporte Técnico</h5>
+                <a href="mailto:leandro.souza22oliveira@gmail.com" class="text-slate-400 text-sm hover:text-blue-400 transition-colors underline">leandro.souza22oliveira@gmail.com</a>
+                <p class="text-slate-600 text-[9px] mt-2 italic uppercase">Atendimento 2026 Seg-Sex</p>
             </div>
         </div>
     </footer>
