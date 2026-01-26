@@ -39,6 +39,18 @@
         }
         .img-tech:hover { border-color: #3b82f6; transform: scale(1.01); }
 
+        .video-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(0, 65, 255, 0.3);
+            transition: transform 0.5s ease, border-color 0.5s ease;
+        }
+        .video-container:hover {
+            transform: scale(1.02);
+            border-color: #00d2ff;
+        }
+
         .info-desc {
             max-height: 0;
             overflow: hidden;
@@ -59,8 +71,8 @@
             <div class="flex items-center gap-2 md:gap-3 min-w-0">
                 <img src="logo.png" alt="Logo" class="w-7 h-7 md:w-8 md:h-8 object-contain shrink-0">
                 <div class="flex flex-col truncate">
-                    <span class="font-title text-[8px] md:text-base font-bold tracking-tighter text-white truncate uppercase">SISTEMA CONTROLE DE PATRIMÔNIO <span class="text-blue-420">PRO</span></span>
-                    <span class="text-[7px] md:text-[9px] uppercase tracking-[0.2em] text-blue-380 font-bold italic">Help Tec Soluções Inteligentes ©</span>
+                    <span class="font-title text-[10px] md:text-base font-bold tracking-tighter text-white truncate uppercase">SISTEMA CONTROLE DE PATRIMÔNIO <span class="text-blue-500">PRO</span></span>
+                    <span class="text-[7px] md:text-[9px] uppercase tracking-[0.2em] text-blue-400 font-bold italic">Help Tec Soluções Inteligentes ©</span>
                 </div>
             </div>
             <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-gradient text-white px-3 md:px-5 py-2 rounded-xl font-bold text-[9px] md:text-xs uppercase tracking-widest whitespace-nowrap shrink-0">COMPRAR <span class="hidden md:inline">AGORA</span> <i class="fas fa-shopping-cart ml-1 md:ml-2"></i>
@@ -99,6 +111,23 @@
         </div>
     </section>
 
+    <section class="py-16 px-6 bg-[#080808]">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-title font-bold text-white uppercase italic mb-10">SISTEMA EM <span class="text-blue-500">AÇÃO</span></h2>
+            
+            <div class="video-container shadow-2xl glass-card">
+                <video id="demoVideo" class="w-full h-auto cursor-pointer" loop muted playsinline poster="painel.png" onmouseover="this.play(); this.muted=false" onmouseout="this.pause(); this.muted=true">
+                    <source src="video.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
+                    <i class="fas fa-mouse-pointer text-blue-400 animate-bounce"></i>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-white">Passe o mouse para dar play</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-16 px-6">
         <div class="max-w-7xl mx-auto glass-card p-8 md:p-12 rounded-[2.5rem] border-blue-500/20 relative overflow-hidden">
             <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 blur-3xl rounded-full"></div>
@@ -106,7 +135,7 @@
                 <div class="order-2 md:order-1">
                     <h2 class="text-3xl md:text-5xl font-title font-bold text-white uppercase italic mb-6">SISTEMA SEMPRE <span class="text-blue-500">EVOLUINDO</span></h2>
                     <p class="text-slate-300 text-lg leading-relaxed mb-6">
-                        Ao adquirir a licença PRO, você garante acesso vitalício a todas as novas atualizações e melhorias tecnológicas Nosso compromisso é manter o sistema sempre rápido, seguro e atualizado com as novas necessidades do mercado.
+                        Ao adquirir a licença PRO, você garante acesso vitalício a todas as novas atualizações e melhorias tecnológicas. Nosso compromisso é manter o sistema sempre rápido, seguro e atualizado com as novas necessidades do mercado.
                     </p>
                     <div class="flex items-center gap-4 bg-blue-600/10 p-4 rounded-xl border border-blue-500/30">
                         <i class="fas fa-sync-alt text-3xl text-blue-400 animate-spin-slow"></i>
@@ -124,144 +153,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-title font-bold text-white">0.02s</h3>
-                    <i class="fas fa-search text-blue-500"></i>
-                </div>
-                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Busca Instantânea</p>
-                <div class="info-desc">
-                    Encontre qualquer item no meio de milhares em milésimos de segundo. Basta digitar uma letra e o sistema localiza na hora.
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-title font-bold text-white">QR CODE</h3>
-                    <i class="fas fa-qrcode text-blue-500"></i>
-                </div>
-                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Etiquetas Prontas</p>
-                <div class="info-desc">
-                    O sistema cria sozinho o código para cada item. Você imprime e cola no móvel ou computador para rastrear pelo celular.
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-title font-bold text-white">OFFLINE</h3>
-                    <i class="fas fa-database text-blue-500"></i>
-                </div>
-                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Dados Seguros</p>
-                <div class="info-desc">
-                    Seus dados ficam gravados no seu computador, não na internet. Isso garante total privacidade e segurança das suas informações.
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-blue-500" onclick="this.classList.toggle('card-active')">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-title font-bold text-white">PDF</h3>
-                    <i class="fas fa-file-pdf text-blue-500"></i>
-                </div>
-                <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mt-1">Relatórios em 1 Clique</p>
-                <div class="info-desc">
-                    Gere documentos prontos para impressão com a lista de todos os bens para conferências e auditorias.
-                </div>
-            </div>
-        </div>
-        <p class="text-center text-slate-500 text-[10px] mt-4 uppercase tracking-[0.2em] font-bold italic underline">Clique nos itens acima para saber mais</p>
-    </section>
-
-    <section class="py-20 px-6 bg-[#080808]">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-center font-title text-2xl md:text-4xl text-white mb-12 uppercase italic">QUEM USA, <span class="text-blue-500">APROVA</span></h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="flex text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 italic text-sm">"Implementamos na nossa secretaria e a organização mudou 100%. O QR Code facilita muito o inventário."</p>
-                    <p class="text-blue-500 font-bold mt-4 text-xs uppercase tracking-widest">— Secretaria Administrativa</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl border-blue-500/30">
-                    <div class="flex text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 italic text-sm">"Não entendo de TI e consegui usar de primeira. É muito intuitivo e gera etiquetas perfeitas."</p>
-                    <p class="text-blue-500 font-bold mt-4 text-xs uppercase tracking-widest">— Gestor de Patrimônio</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="flex text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 italic text-sm">"O melhor investimento. Sem mensalidade e suporte nota 10. Recomendo para todas as empresas."</p>
-                    <p class="text-blue-500 font-bold mt-4 text-xs uppercase tracking-widest">— Empresário Local</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-title font-bold text-white italic uppercase tracking-tighter text-center mb-16">TECNOLOGIA QUE <span class="text-blue-500">FACILITA O TRABALHO</span></h2>
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h4 class="font-title text-blue-500 mb-2 uppercase">Entrada e Saída</h4>
-                        <p class="text-slate-400 text-sm">Saiba exatamente quem retirou um item e quando ele foi devolvido. Evite perdas de patrimônio.</p>
-                    </div>
-                    <img src="TELA PATRIMONIO NOVO .png" class="img-tech w-full" alt="Cadastro Novo">
-                    <img src="TELA SAIDA DE PARIMONIO.png" class="img-tech w-full" alt="Tela Saída">
-                </div>
-                <div class="space-y-6">
-                    <img src="TELA PATRIMONIO USADO.png" class="img-tech w-full" alt="Cadastro Usado">
-                    <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
-                        <h4 class="font-title text-blue-500 mb-2 uppercase">Economia de Tempo</h4>
-                        <p class="text-slate-400 text-sm">O que levava dias agora é feito em minutos com etiquetas inteligentes rastreáveis.</p>
-                    </div>
-                    <img src="RELATORIO.png" class="img-tech w-full" alt="Relatório PDF">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-center font-title text-2xl md:text-4xl text-white mb-12 uppercase italic">DÚVIDAS <span class="text-blue-500">FREQUENTES</span></h2>
-            <div class="space-y-4">
-                <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="this.classList.toggle('card-active')">
-                    <div class="flex justify-between items-center font-bold text-white uppercase tracking-tighter">
-                        <span>Preciso de internet para usar?</span>
-                        <i class="fas fa-plus text-blue-500"></i>
-                    </div>
-                    <div class="info-desc">Não. O sistema funciona de forma offline no seu computador, garantindo que você tenha acesso aos dados mesmo sem conexão.</div>
-                </div>
-                <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="this.classList.toggle('card-active')">
-                    <div class="flex justify-between items-center font-bold text-white uppercase tracking-tighter">
-                        <span>O pagamento é mensal?</span>
-                        <i class="fas fa-plus text-blue-500"></i>
-                    </div>
-                    <div class="info-desc">Não! O pagamento é único. Você compra a licença vitalícia e usa para sempre sem cobranças recorrentes.</div>
-                </div>
-                <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="this.classList.toggle('card-active')">
-                    <div class="flex justify-between items-center font-bold text-white uppercase tracking-tighter">
-                        <span>Funciona em qualquer computador?</span>
-                        <i class="fas fa-plus text-blue-500"></i>
-                    </div>
-                    <div class="info-desc">Sim, o sistema é leve e compatível com Windows. Não exige máquinas potentes para funcionar com rapidez.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 md:py-24 px-4 md:px-6 text-center">
-        <div class="max-w-2xl mx-auto glass-card p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border-blue-500/30">
-            <h2 class="text-2xl md:text-5xl font-title font-bold mb-4 text-white uppercase italic tracking-tighter">
-                O MELHOR <span class="text-blue-500">INVESTIMENTO</span>
-            </h2>
-            <div class="flex flex-col items-center mb-8">
-                <span class="text-slate-500 line-through text-lg md:text-xl">R$ 299,90</span>
-                <span class="text-5xl md:text-8xl font-title font-bold text-white tracking-tighter">R$ 149,90</span>
-                <p class="text-blue-400 text-xs md:text-base font-bold uppercase tracking-widest mt-2">Pagamento Único • Sem Mensalidade</p>
-            </div>
-            <a href="https://pay.hotmart.com/W104049568D" target="_blank" class="btn-gradient w-full py-5 md:py-6 rounded-2xl text-lg md:text-2xl font-title font-bold text-white uppercase italic flex items-center justify-center gap-3">
-                COMPRAR AGORA <i class="fas fa-lock"></i>
-            </a>
         </div>
     </section>
 
