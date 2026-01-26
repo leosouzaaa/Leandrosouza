@@ -119,14 +119,23 @@
     <section class="py-16 px-6 bg-[#080808]">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl md:text-5xl font-title font-bold text-white uppercase italic mb-10">SISTEMA EM <span class="text-blue-500">AÇÃO</span></h2>
+            
             <div class="video-container shadow-2xl glass-card">
-                <video id="demoVideo" class="w-full h-auto cursor-pointer" loop muted playsinline poster="painel.png" onmouseover="this.play(); this.muted=false" onmouseout="this.pause(); this.muted=true">
+                <video id="demoVideo" 
+                       class="w-full h-auto cursor-pointer" 
+                       autoplay 
+                       muted 
+                       loop 
+                       playsinline 
+                       poster="painel.png" 
+                       onmouseover="this.muted=false" 
+                       onmouseout="this.muted=true">
                     <source src="video.mp4" type="video/mp4">
                     Seu navegador não suporta vídeos.
                 </video>
-                <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
+                <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2 pointer-events-none">
                     <i class="fas fa-mouse-pointer text-blue-400 animate-bounce"></i>
-                    <span class="text-[10px] uppercase font-bold tracking-widest text-white">Passe o mouse para áudio e play</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-white">Passe o mouse para áudio</span>
                 </div>
             </div>
         </div>
